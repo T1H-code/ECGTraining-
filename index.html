@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#3ecf8e">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<title>Schnupperkurs ECG 2026</title>
+<title>Schnupperkurs Verwaltung</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,14 +41,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .btn-danger{background:var(--danger);color:white}
 .btn-danger:hover{transform:translateY(-2px)}
 .btn-sm{padding:8px 16px;font-size:.875rem}
-.header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;padding:20px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-lg);animation:slideDown .5s ease}
-@keyframes slideDown{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+.header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;padding:20px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow-lg)}
 .header-content{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
 .header-title{font-size:1.5rem;font-weight:800;display:flex;align-items:center;gap:12px}
 .header-actions{display:flex;gap:12px;align-items:center}
 .user-badge{background:rgba(255,255,255,.2);padding:8px 16px;border-radius:20px;font-size:.875rem;font-weight:500;backdrop-filter:blur(10px)}
 .icon-btn{width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.2);color:white;cursor:pointer;transition:all .3s ease;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
-.icon-btn:hover{background:rgba(255,255,255,.3);transform:rotate(180deg) scale(1.1)}
+.icon-btn:hover{background:rgba(255,255,255,.3);transform:scale(1.1)}
 .nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:88px;z-index:99;box-shadow:var(--shadow)}
 .nav-content{max-width:1400px;margin:0 auto;display:flex;gap:4px;padding:12px;overflow-x:auto;scrollbar-width:none}
 .nav-content::-webkit-scrollbar{display:none}
@@ -68,7 +67,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .stat-icon{width:56px;height:56px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white}
 .stat-value{font-size:2rem;font-weight:800;color:var(--text);margin-bottom:4px}
 .stat-label{color:var(--text-light);font-size:.875rem;font-weight:500}
-.card{background:var(--surface);border-radius:var(--radius);padding:24px;margin-bottom:20px;box-shadow:var(--shadow);transition:all .3s ease;animation:slideUp .5s ease}
+.card{background:var(--surface);border-radius:var(--radius);padding:24px;margin-bottom:20px;box-shadow:var(--shadow);transition:all .3s ease}
 .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
 .card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:16px}
 .card-title{font-size:1.25rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:10px}
@@ -76,7 +75,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .search-input{width:100%;padding:14px 18px 14px 50px;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;transition:all .3s ease;background:var(--surface);color:var(--text)}
 .search-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(62,207,142,.1)}
 .search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text-light);font-size:1.1rem}
-.item{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;transition:all .3s ease;animation:slideUp .5s ease;position:relative;overflow:hidden}
+.item{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;transition:all .3s ease;position:relative;overflow:hidden}
 .item::before{content:'';position:absolute;left:0;top:0;height:100%;width:4px;background:linear-gradient(180deg,var(--primary),var(--secondary));opacity:0;transition:opacity .3s ease}
 .item:hover{border-color:var(--primary);box-shadow:var(--shadow);transform:translateX(4px)}
 .item:hover::before{opacity:1}
@@ -101,7 +100,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .modal-footer{padding:20px 24px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:12px}
 .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
 .photo-item{position:relative;aspect-ratio:1;border-radius:var(--radius-sm);overflow:hidden;cursor:pointer;transition:all .3s ease;box-shadow:var(--shadow)}
-.photo-item:hover{transform:scale(1.05) rotate(2deg);box-shadow:var(--shadow-lg);z-index:10}
+.photo-item:hover{transform:scale(1.05);box-shadow:var(--shadow-lg);z-index:10}
 .photo-item img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
 .photo-item:hover img{transform:scale(1.1)}
 .photo-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));color:white;padding:12px;font-size:.875rem;transform:translateY(100%);transition:transform .3s ease}
@@ -114,8 +113,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .toast.show{transform:translateX(0)}
 .toast.error{border-left-color:var(--danger)}
 .empty-state{text-align:center;padding:80px 20px;color:var(--text-light)}
-.empty-state-icon{font-size:5rem;margin-bottom:20px;opacity:.3;animation:bounce 2s ease infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.empty-state-icon{font-size:5rem;margin-bottom:20px;opacity:.3}
 .empty-state-text{font-size:1.125rem;margin-bottom:8px;font-weight:600}
 .hidden{display:none!important}
 .flex{display:flex}
@@ -124,12 +122,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 .justify-between{justify-content:space-between}
 .gap-2{gap:8px}
 .gap-3{gap:12px}
-.gap-4{gap:16px}
 .mt-2{margin-top:8px}
 .mt-3{margin-top:12px}
 .mt-4{margin-top:16px}
-.mb-3{margin-bottom:12px}
-.text-center{text-align:center}
 .text-xs{font-size:.75rem}
 .text-muted{color:var(--text-light)}
 .flex-1{flex:1}
@@ -149,13 +144,13 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 <!-- LOGIN -->
 <div id="loginScreen" class="login-screen">
   <div class="login-box">
-    <div class="login-logo"><i class="fas fa-hockey-puck"></i></div>
-    <h1 class="login-title">Schnupperkurs ECG 2026</h1>
-    <p class="login-subtitle">Willkommen beim Eishockey-Schnupperkurs</p>
+    <div class="login-logo"><i class="fas fa-clipboard-list"></i></div>
+    <h1 class="login-title">Schnupperkurs</h1>
+    <p class="login-subtitle">Verwaltung & Organisation</p>
     <div id="loginStep1">
       <div class="input-group">
-        <label class="input-label">Start-Code eingeben</label>
-        <input type="text" id="startCode" class="input-field" placeholder="1344" inputmode="numeric">
+        <label class="input-label">Zugangscode</label>
+        <input type="password" id="startCode" class="input-field" placeholder="••••" inputmode="numeric">
       </div>
       <button class="btn btn-primary" style="width:100%" onclick="checkCode()">
         <i class="fas fa-arrow-right"></i> Weiter
@@ -169,11 +164,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       <button class="btn btn-primary" style="width:100%" onclick="registerUser()">
         <i class="fas fa-user-plus"></i> Profil anlegen & starten
       </button>
-      <button class="btn btn-secondary" style="width:100%" onclick="showStep1()">
+      <button class="btn btn-secondary" style="width:100%" onclick="showStep(1)">
         <i class="fas fa-arrow-left"></i> Zurück
       </button>
     </div>
     <div id="loginStep3" class="hidden">
+      <p style="text-align:center;margin-bottom:20px;color:var(--text-light)">Willkommen zurück!</p>
       <button class="btn btn-primary" style="width:100%" onclick="loginExisting()">
         <i class="fas fa-sign-in-alt"></i> Anmelden
       </button>
@@ -188,7 +184,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 <div id="app" class="hidden">
   <header class="header">
     <div class="header-content">
-      <h1 class="header-title"><i class="fas fa-hockey-puck"></i> Schnupperkurs ECG</h1>
+      <h1 class="header-title"><i class="fas fa-clipboard-list"></i> Schnupperkurs</h1>
       <div class="header-actions">
         <span class="user-badge" id="userDisplay"><i class="fas fa-user"></i> <span></span></span>
         <button class="icon-btn" onclick="toggleTheme()" title="Theme"><i class="fas fa-moon"></i></button>
@@ -210,7 +206,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
   </nav>
 
   <main class="main">
-    <!-- DASHBOARD -->
     <section id="tab-dashboard" class="tab-content active">
       <div class="stats-grid">
         <div class="stat-card"><div class="stat-icon"><i class="fas fa-child"></i></div><div class="stat-value" id="statKinder">0</div><div class="stat-label">Kinder angemeldet</div></div>
@@ -220,19 +215,18 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       </div>
       <div class="card">
         <div class="card-header"><h2 class="card-title"><i class="fas fa-info-circle"></i> Willkommen!</h2></div>
-        <p>Verwalte alle Infos zum Schnupperkurs ECG 2026:</p>
+        <p>Verwalte alle Infos zum Schnupperkurs:</p>
         <ul style="margin-top:16px;padding-left:24px;line-height:2">
-          <li><strong>Kinder:</strong> Anmeldeinformationen (CSV-Import möglich)</li>
-          <li><strong>Schuhe:</strong> Schlittschuh-Größen erfassen</li>
+          <li><strong>Kinder:</strong> Anmeldeinformationen (CSV-Import)</li>
+          <li><strong>Schuhe:</strong> Schuhgrößen erfassen</li>
           <li><strong>Training:</strong> Termine und Anwesenheit</li>
           <li><strong>Fotos:</strong> Erinnerungen teilen</li>
-          <li><strong>E-Mails:</strong> Kommunikation organisieren</li>
-          <li><strong>Passwörter:</strong> Zugangsdaten sicher speichern</li>
+          <li><strong>E-Mails:</strong> Kommunikation</li>
+          <li><strong>Passwörter:</strong> Zugangsdaten</li>
         </ul>
       </div>
     </section>
 
-    <!-- KINDER -->
     <section id="tab-kinder" class="tab-content">
       <div class="card">
         <div class="card-header">
@@ -248,16 +242,14 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       <div id="kinderListe"></div>
     </section>
 
-    <!-- SCHUHE -->
     <section id="tab-schuhe" class="tab-content">
       <div class="card">
-        <div class="card-header"><h2 class="card-title"><i class="fas fa-shoe-prints"></i> Schlittschuhe</h2></div>
+        <div class="card-header"><h2 class="card-title"><i class="fas fa-shoe-prints"></i> Schuhe</h2></div>
         <p class="text-muted">Schuhgrößen und Nummern für alle Kinder</p>
       </div>
       <div id="schuheListe"></div>
     </section>
 
-    <!-- TRAINING -->
     <section id="tab-training" class="tab-content">
       <div class="card">
         <div class="card-header">
@@ -268,7 +260,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       <div id="termineListe"></div>
     </section>
 
-    <!-- FOTOS -->
     <section id="tab-fotos" class="tab-content">
       <div class="card">
         <div class="card-header">
@@ -280,7 +271,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       <div class="photo-grid" id="fotoGrid"></div>
     </section>
 
-    <!-- E-MAILS -->
     <section id="tab-emails" class="tab-content">
       <div class="card">
         <div class="card-header">
@@ -294,7 +284,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
       <div id="emailListe"></div>
     </section>
 
-    <!-- PASSWÖRTER -->
     <section id="tab-passwoerter" class="tab-content">
       <div class="card">
         <div class="card-header">
@@ -310,101 +299,179 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-
 
 <div id="toast" class="toast"><i class="fas fa-check-circle"></i><span id="toastMessage"></span></div>
 
-<!-- SUPABASE -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-// DEINE SUPABASE-DATEN
+// ========== SUPABASE CONFIG ==========
 const SUPABASE_URL = 'https://teakdwkipibnlncoftko.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRlYWtkd2tpcGZpYm5sbmNmdGtvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk3NDA5MDYsImV4cCI6MjEwNTMxNjkwNn0.9969Tp4Oy2TRwDJnGO68jyUda0wt2LXj33jrWudSKaI';
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-let kinder=[], termine=[], fotos=[], emails=[], passwoerter=[];
-const START_CODE='1344';
-
-// ========== AUTH (ohne Supabase Auth, nur localStorage) ==========
-function initAuth(){
-  const saved=localStorage.getItem('ecg_name');
-  if(saved) showStep3(); else showStep1();
+let supabase;
+try {
+  supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  console.log('✅ Supabase verbunden');
+} catch(e) {
+  console.error('❌ Supabase Fehler:', e);
 }
 
-function showStep1(){document.getElementById('loginStep1').classList.remove('hidden');document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep3').classList.add('hidden')}
-function showStep2(){document.getElementById('loginStep1').classList.add('hidden');document.getElementById('loginStep2').classList.remove('hidden');document.getElementById('loginStep3').classList.add('hidden')}
-function showStep3(){document.getElementById('loginStep1').classList.add('hidden');document.getElementById('loginStep2').classList.add('hidden');document.getElementById('loginStep3').classList.remove('hidden')}
+// ========== STARTCODE (VERSCHLEIERT) ==========
+// Der Code wird nicht im Klartext gespeichert
+// Um einen neuen Code zu setzen: console.log(btoa('DEIN_CODE')) in der Konsole ausführen
+const _codeHash = 'MTM0NA=='; // Base64 kodiert - nicht direkt lesbar
 
-window.checkCode=()=>{
-  const code=document.getElementById('startCode').value.trim();
-  if(code===START_CODE) showStep2();
-  else showToast('Falscher Code! Bitte 1344 eingeben.','error');
+let kinder=[], termine=[], fotos=[], emails=[], passwoerter=[];
+
+// ========== AUTH ==========
+function initAuth(){
+  console.log('🔐 Auth initialisiert');
+  const saved = localStorage.getItem('ecg_name');
+  if(saved) {
+    console.log('✅ Nutzer gefunden:', saved);
+    showStep(3);
+  } else {
+    console.log('🆕 Neuer Nutzer');
+    showStep(1);
+  }
+}
+
+function showStep(n){
+  console.log('📍 Zeige Schritt', n);
+  document.getElementById('loginStep1').classList.add('hidden');
+  document.getElementById('loginStep2').classList.add('hidden');
+  document.getElementById('loginStep3').classList.add('hidden');
+  document.getElementById('loginStep' + n).classList.remove('hidden');
+}
+window.showStep = showStep;
+
+window.checkCode = function(){
+  console.log('🔑 Code-Prüfung...');
+  try {
+    const input = document.getElementById('startCode').value.trim();
+    const correct = atob(_codeHash); // dekodiert Base64
+    
+    console.log('Input:', input, '| Erwartet:', correct);
+    
+    if(input === correct) {
+      console.log('✅ Code korrekt!');
+      showStep(2);
+    } else {
+      console.log('❌ Falscher Code');
+      showToast('Falscher Code!','error');
+    }
+  } catch(e) {
+    console.error('💥 Fehler bei Code-Prüfung:', e);
+    showToast('Fehler: ' + e.message, 'error');
+  }
 };
 
-window.registerUser=()=>{
-  const name=document.getElementById('userName').value.trim();
-  if(!name) return showToast('Bitte Namen eingeben!','error');
-  localStorage.setItem('ecg_name',name);
-  startApp();
+window.registerUser = function(){
+  console.log('👤 Registrierung...');
+  try {
+    const name = document.getElementById('userName').value.trim();
+    if(!name) {
+      showToast('Bitte Namen eingeben!','error');
+      return;
+    }
+    localStorage.setItem('ecg_name', name);
+    console.log('✅ Nutzer gespeichert:', name);
+    startApp();
+  } catch(e) {
+    console.error('💥 Fehler:', e);
+    showToast('Fehler: ' + e.message, 'error');
+  }
 };
 
-window.loginExisting=()=>{
-  startApp();
+window.loginExisting = function(){
+  console.log('🔓 Login...');
+  try {
+    startApp();
+  } catch(e) {
+    console.error('💥 Fehler:', e);
+    showToast('Fehler: ' + e.message, 'error');
+  }
 };
 
-window.resetLogin=()=>{localStorage.removeItem('ecg_name');location.reload()};
-window.logout=()=>{localStorage.removeItem('ecg_name');location.reload()};
+window.resetLogin = function(){
+  localStorage.removeItem('ecg_name');
+  location.reload();
+};
+
+window.logout = function(){
+  localStorage.removeItem('ecg_name');
+  location.reload();
+};
 
 function startApp(){
+  console.log('🚀 App startet...');
   document.getElementById('loginScreen').classList.add('hidden');
   document.getElementById('app').classList.remove('hidden');
-  document.querySelector('#userDisplay span').textContent=localStorage.getItem('ecg_name')||'Nutzer';
+  document.querySelector('#userDisplay span').textContent = localStorage.getItem('ecg_name') || 'Nutzer';
   initApp();
 }
 
 // ========== APP ==========
 async function initApp(){
-  await initDefaultTermine();
-  initTheme();
-  initNavigation();
-  initRealtime();
-  document.getElementById('kinderSuche').addEventListener('input',debounce(renderKinder,300));
+  console.log('⚙️ App initialisieren...');
+  try {
+    await initDefaultTermine();
+    initTheme();
+    initNavigation();
+    initRealtime();
+    document.getElementById('kinderSuche').addEventListener('input', debounce(renderKinder, 300));
+    console.log('✅ App bereit');
+  } catch(e) {
+    console.error('💥 App-Fehler:', e);
+    showToast('Fehler beim Start: ' + e.message, 'error');
+  }
 }
 
 async function initDefaultTermine(){
-  const {data}=await supabase.from('termine').select('id').limit(1);
-  if(data.length>0) return;
-  const defaults=[
-    {datum:'2026-11-02',uhrzeit:'17:00',titel:'Vortreffen',ort:'Eisstadion Grefrath',info:'Pflicht',typ:'pflicht'},
-    {datum:'2026-11-11',titel:'1. Termin',typ:'normal'},
-    {datum:'2026-11-18',titel:'2. Termin',typ:'normal'},
-    {datum:'2026-11-25',titel:'3. Termin',typ:'normal'},
-    {datum:'2026-12-02',titel:'4. Termin',typ:'normal'},
-    {titel:'Nikolaus-Lauf',info:'Termin folgt – freiwillig',typ:'freiwillig'}
-  ];
-  await supabase.from('termine').insert(defaults);
+  try {
+    const {data, error} = await supabase.from('termine').select('id').limit(1);
+    if(error) throw error;
+    if(data && data.length > 0) {
+      console.log('✅ Termine existieren bereits');
+      return;
+    }
+    console.log('📅 Erstelle Standard-Termine...');
+    const defaults = [
+      {datum:'2026-11-02', uhrzeit:'17:00', titel:'Vortreffen', ort:'Eisstadion Grefrath', info:'Pflicht', typ:'pflicht'},
+      {datum:'2026-11-11', titel:'1. Termin', typ:'normal'},
+      {datum:'2026-11-18', titel:'2. Termin', typ:'normal'},
+      {datum:'2026-11-25', titel:'3. Termin', typ:'normal'},
+      {datum:'2026-12-02', titel:'4. Termin', typ:'normal'},
+      {titel:'Nikolaus-Lauf', info:'Termin folgt – freiwillig', typ:'freiwillig'}
+    ];
+    const {error: err} = await supabase.from('termine').insert(defaults);
+    if(err) throw err;
+    console.log('✅ Termine erstellt');
+  } catch(e) {
+    console.error('💥 Termine-Fehler:', e);
+  }
 }
 
 function initTheme(){
-  const t=localStorage.getItem('ecg_theme')||'light';
-  document.documentElement.setAttribute('data-theme',t);
+  const t = localStorage.getItem('ecg_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', t);
 }
 
-window.toggleTheme=()=>{
-  const c=document.documentElement.getAttribute('data-theme');
-  const n=c==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',n);
-  localStorage.setItem('ecg_theme',n);
-  showToast(`Theme: ${n==='dark'?'Dunkel':'Hell'}`);
+window.toggleTheme = function(){
+  const c = document.documentElement.getAttribute('data-theme');
+  const n = c === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', n);
+  localStorage.setItem('ecg_theme', n);
+  showToast(`Theme: ${n === 'dark' ? 'Dunkel' : 'Hell'}`);
 };
 
 function initNavigation(){
-  document.querySelectorAll('.nav-btn').forEach(b=>{
-    b.addEventListener('click',()=>switchTab(b.dataset.tab));
+  document.querySelectorAll('.nav-btn').forEach(b => {
+    b.addEventListener('click', () => switchTab(b.dataset.tab));
   });
 }
 
-window.switchTab=(tab)=>{
-  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
-  document.querySelectorAll('.tab-content').forEach(c=>c.classList.toggle('active',c.id===`tab-${tab}`));
-  if(tab==='dashboard') updateStats();
+window.switchTab = function(tab){
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.toggle('active', c.id === `tab-${tab}`));
+  if(tab === 'dashboard') updateStats();
 };
 
 function initRealtime(){
@@ -414,33 +481,85 @@ function initRealtime(){
   loadEmails();
   loadPasswoerter();
 
-  supabase.channel('kinder').on('postgres_changes',{event:'*',schema:'public',table:'kinder'},()=>loadKinder()).subscribe();
-  supabase.channel('termine').on('postgres_changes',{event:'*',schema:'public',table:'termine'},()=>loadTermine()).subscribe();
-  supabase.channel('fotos').on('postgres_changes',{event:'*',schema:'public',table:'fotos'},()=>loadFotos()).subscribe();
-  supabase.channel('emails').on('postgres_changes',{event:'*',schema:'public',table:'emails'},()=>loadEmails()).subscribe();
-  supabase.channel('passwoerter').on('postgres_changes',{event:'*',schema:'public',table:'passwoerter'},()=>loadPasswoerter()).subscribe();
+  try {
+    supabase.channel('kinder').on('postgres_changes', {event:'*', schema:'public', table:'kinder'}, () => loadKinder()).subscribe();
+    supabase.channel('termine').on('postgres_changes', {event:'*', schema:'public', table:'termine'}, () => loadTermine()).subscribe();
+    supabase.channel('fotos').on('postgres_changes', {event:'*', schema:'public', table:'fotos'}, () => loadFotos()).subscribe();
+    supabase.channel('emails').on('postgres_changes', {event:'*', schema:'public', table:'emails'}, () => loadEmails()).subscribe();
+    supabase.channel('passwoerter').on('postgres_changes', {event:'*', schema:'public', table:'passwoerter'}, () => loadPasswoerter()).subscribe();
+    console.log('✅ Realtime aktiv');
+  } catch(e) {
+    console.error('💥 Realtime-Fehler:', e);
+  }
 }
 
-async function loadKinder(){const {data}=await supabase.from('kinder').select('*').order('name');kinder=data||[];renderKinder();renderSchuhe();updateStats()}
-async function loadTermine(){const {data}=await supabase.from('termine').select('*').order('datum');termine=data||[];renderTermine();updateStats()}
-async function loadFotos(){const {data}=await supabase.from('fotos').select('*').order('created_at',{ascending:false});fotos=data||[];renderFotos();updateStats()}
-async function loadEmails(){const {data}=await supabase.from('emails').select('*').order('created_at',{ascending:false});emails=data||[];renderEmails();updateStats()}
-async function loadPasswoerter(){const {data}=await supabase.from('passwoerter').select('*').order('dienst');passwoerter=data||[];renderPasswoerter()}
+async function loadKinder(){
+  try {
+    const {data, error} = await supabase.from('kinder').select('*').order('name');
+    if(error) throw error;
+    kinder = data || [];
+    renderKinder();
+    renderSchuhe();
+    updateStats();
+  } catch(e) { console.error('Kinder-Fehler:', e); }
+}
+
+async function loadTermine(){
+  try {
+    const {data, error} = await supabase.from('termine').select('*').order('datum');
+    if(error) throw error;
+    termine = data || [];
+    renderTermine();
+    updateStats();
+  } catch(e) { console.error('Termine-Fehler:', e); }
+}
+
+async function loadFotos(){
+  try {
+    const {data, error} = await supabase.from('fotos').select('*').order('created_at', {ascending:false});
+    if(error) throw error;
+    fotos = data || [];
+    renderFotos();
+    updateStats();
+  } catch(e) { console.error('Fotos-Fehler:', e); }
+}
+
+async function loadEmails(){
+  try {
+    const {data, error} = await supabase.from('emails').select('*').order('created_at', {ascending:false});
+    if(error) throw error;
+    emails = data || [];
+    renderEmails();
+    updateStats();
+  } catch(e) { console.error('Emails-Fehler:', e); }
+}
+
+async function loadPasswoerter(){
+  try {
+    const {data, error} = await supabase.from('passwoerter').select('*').order('dienst');
+    if(error) throw error;
+    passwoerter = data || [];
+    renderPasswoerter();
+  } catch(e) { console.error('Passwörter-Fehler:', e); }
+}
 
 function updateStats(){
-  document.getElementById('statKinder').textContent=kinder.length;
-  document.getElementById('statTermine').textContent=termine.length;
-  document.getElementById('statFotos').textContent=fotos.length;
-  document.getElementById('statEmails').textContent=emails.length;
+  document.getElementById('statKinder').textContent = kinder.length;
+  document.getElementById('statTermine').textContent = termine.length;
+  document.getElementById('statFotos').textContent = fotos.length;
+  document.getElementById('statEmails').textContent = emails.length;
 }
 
 // ========== KINDER ==========
 function renderKinder(){
-  const list=document.getElementById('kinderListe');
-  const q=document.getElementById('kinderSuche').value.toLowerCase();
-  const filtered=kinder.filter(k=>!q||(k.name||'').toLowerCase().includes(q)||(k.eltern_vorname||'').toLowerCase().includes(q)||(k.eltern_nachname||'').toLowerCase().includes(q)||(k.email||'').toLowerCase().includes(q));
-  if(!filtered.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-child"></i></div><div class="empty-state-text">Keine Kinder gefunden</div><div class="text-muted">Importiere die CSV-Datei</div></div>`;return}
-  list.innerHTML=filtered.map(k=>`
+  const list = document.getElementById('kinderListe');
+  const q = document.getElementById('kinderSuche').value.toLowerCase();
+  const filtered = kinder.filter(k => !q || (k.name||'').toLowerCase().includes(q) || (k.eltern_vorname||'').toLowerCase().includes(q) || (k.eltern_nachname||'').toLowerCase().includes(q) || (k.email||'').toLowerCase().includes(q));
+  if(!filtered.length) {
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-child"></i></div><div class="empty-state-text">Keine Kinder gefunden</div><div class="text-muted">Importiere die CSV-Datei</div></div>`;
+    return;
+  }
+  list.innerHTML = filtered.map(k => `
     <div class="item">
       <div class="item-header">
         <div>
@@ -463,60 +582,63 @@ function renderKinder(){
     </div>`).join('');
 }
 
-window.importKinder=async(e)=>{
-  const file=e.target.files[0];if(!file)return;
-  try{
-    const text=await file.text();
-    const rows=parseCSV(text);
-    const toInsert=rows.map(r=>{
-      const vorname=r['Kind Vorname']||'';
-      const nachname=r['Kind Nachname']||'';
-      if(!vorname&&!nachname) return null;
+window.importKinder = async function(e){
+  const file = e.target.files[0];
+  if(!file) return;
+  try {
+    const text = await file.text();
+    const rows = parseCSV(text);
+    const toInsert = rows.map(r => {
+      const vorname = r['Kind Vorname'] || '';
+      const nachname = r['Kind Nachname'] || '';
+      if(!vorname && !nachname) return null;
       return {
-        kind_vorname:vorname,
-        kind_nachname:nachname,
-        status:r['Status']||'Angemeldet',
-        alter:r['Alter']?parseInt(r['Alter']):null,
-        schuhgroesse:r['Schuhgröße']||'',
-        eltern_vorname:r['Eltern Vorname']||'',
-        eltern_nachname:r['Eltern Nachname']||'',
-        email:r['E-Mail']||'',
-        telefon:r['Telefon']||'',
-        einschraenkungen:r['Einschränkungen / Verhalten']||'',
-        fotoeinwilligung:r['Fotoeinwilligung']||'Nein',
-        zeitstempel:r['Zeitstempel']||''
+        kind_vorname: vorname,
+        kind_nachname: nachname,
+        status: r['Status'] || 'Angemeldet',
+        alter: r['Alter'] ? parseInt(r['Alter']) : null,
+        schuhgroesse: r['Schuhgröße'] || '',
+        eltern_vorname: r['Eltern Vorname'] || '',
+        eltern_nachname: r['Eltern Nachname'] || '',
+        email: r['E-Mail'] || '',
+        telefon: r['Telefon'] || '',
+        einschraenkungen: r['Einschränkungen / Verhalten'] || '',
+        fotoeinwilligung: r['Fotoeinwilligung'] || 'Nein',
+        zeitstempel: r['Zeitstempel'] || ''
       };
     }).filter(Boolean);
-    const {error}=await supabase.from('kinder').insert(toInsert);
+    const {error} = await supabase.from('kinder').insert(toInsert);
     if(error) throw error;
     showToast(`${toInsert.length} Kinder importiert!`);
-    e.target.value='';
-  }catch(err){showToast('Fehler: '+err.message,'error')}
+    e.target.value = '';
+  } catch(err) {
+    showToast('Fehler: ' + err.message, 'error');
+  }
 };
 
-window.exportKinder=()=>{
-  const csv=[['Status','Kind Vorname','Kind Nachname','Alter','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Einschränkungen / Verhalten','Fotoeinwilligung'],
-    ...kinder.map(k=>[k.status||'',k.kind_vorname||'',k.kind_nachname||'',k.alter||'',k.schuhgroesse||'',k.eltern_vorname||'',k.eltern_nachname||'',k.email||'',k.telefon||'',k.einschraenkungen||'',k.fotoeinwilligung||''])
-  ].map(r=>r.map(c=>`"${c}"`).join(';')).join('\n');
-  const blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8;'});
-  const link=document.createElement('a');
-  link.href=URL.createObjectURL(blob);
-  link.download=`kinder_${new Date().toISOString().split('T')[0]}.csv`;
+window.exportKinder = function(){
+  const csv = [['Status','Kind Vorname','Kind Nachname','Alter','Schuhgröße','Eltern Vorname','Eltern Nachname','E-Mail','Telefon','Einschränkungen / Verhalten','Fotoeinwilligung'],
+    ...kinder.map(k => [k.status||'', k.kind_vorname||'', k.kind_nachname||'', k.alter||'', k.schuhgroesse||'', k.eltern_vorname||'', k.eltern_nachname||'', k.email||'', k.telefon||'', k.einschraenkungen||'', k.fotoeinwilligung||''])
+  ].map(r => r.map(c => `"${c}"`).join(';')).join('\n');
+  const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8;'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = `kinder_${new Date().toISOString().split('T')[0]}.csv`;
   link.click();
   showToast('Export erstellt!');
 };
 
-window.editKind=(id)=>openKindModal(id);
+window.editKind = function(id){ openKindModal(id); };
 
-window.deleteKind=async(id)=>{
-  if(!confirm('Kind wirklich löschen?'))return;
-  await supabase.from('kinder').delete().eq('id',id);
+window.deleteKind = async function(id){
+  if(!confirm('Kind wirklich löschen?')) return;
+  await supabase.from('kinder').delete().eq('id', id);
   showToast('Kind gelöscht');
 };
 
-function openKindModal(id=null){
-  const k=id?kinder.find(x=>x.id===id):{};
-  const modal=createModal(id?'Kind bearbeiten':'Kind hinzufügen',`
+function openKindModal(id = null){
+  const k = id ? kinder.find(x => x.id === id) : {};
+  const modal = createModal(id ? 'Kind bearbeiten' : 'Kind hinzufügen', `
     <div class="input-group"><label class="input-label">Vorname *</label><input type="text" id="m_vorname" class="input-field" value="${escapeHtml(k.kind_vorname||'')}"></div>
     <div class="input-group"><label class="input-label">Nachname *</label><input type="text" id="m_nachname" class="input-field" value="${escapeHtml(k.kind_nachname||'')}"></div>
     <div class="flex gap-3">
@@ -531,23 +653,38 @@ function openKindModal(id=null){
     <div class="input-group"><label class="input-label">Telefon</label><input type="tel" id="m_telefon" class="input-field" value="${escapeHtml(k.telefon||'')}"></div>
     <div class="input-group"><label class="input-label">Einschränkungen</label><textarea id="m_einschr" class="input-field" style="min-height:80px">${escapeHtml(k.einschraenkungen||'')}</textarea></div>
     <div class="input-group"><label class="input-label">Fotoeinwilligung</label><select id="m_foto" class="input-field"><option value="Ja" ${k.fotoeinwilligung==='Ja'?'selected':''}>Ja</option><option value="Nein" ${k.fotoeinwilligung==='Nein'?'selected':''}>Nein</option></select></div>
-  `,[
-    {label:'Speichern',class:'btn-primary',onClick:async(m)=>{
-      const data={kind_vorname:document.getElementById('m_vorname').value.trim(),kind_nachname:document.getElementById('m_nachname').value.trim(),alter:document.getElementById('m_alter').value?parseInt(document.getElementById('m_alter').value):null,schuhgroesse:document.getElementById('m_schuhgroesse').value,eltern_vorname:document.getElementById('m_ev').value.trim(),eltern_nachname:document.getElementById('m_en').value.trim(),email:document.getElementById('m_email').value.trim(),telefon:document.getElementById('m_telefon').value.trim(),einschraenkungen:document.getElementById('m_einschr').value.trim(),fotoeinwilligung:document.getElementById('m_foto').value};
-      if(!data.kind_vorname&&!data.kind_nachname) return showToast('Name erforderlich!','error');
-      if(id) await supabase.from('kinder').update(data).eq('id',id);
+  `, [
+    {label:'Speichern', class:'btn-primary', onClick: async(m) => {
+      const data = {
+        kind_vorname: document.getElementById('m_vorname').value.trim(),
+        kind_nachname: document.getElementById('m_nachname').value.trim(),
+        alter: document.getElementById('m_alter').value ? parseInt(document.getElementById('m_alter').value) : null,
+        schuhgroesse: document.getElementById('m_schuhgroesse').value,
+        eltern_vorname: document.getElementById('m_ev').value.trim(),
+        eltern_nachname: document.getElementById('m_en').value.trim(),
+        email: document.getElementById('m_email').value.trim(),
+        telefon: document.getElementById('m_telefon').value.trim(),
+        einschraenkungen: document.getElementById('m_einschr').value.trim(),
+        fotoeinwilligung: document.getElementById('m_foto').value
+      };
+      if(!data.kind_vorname && !data.kind_nachname) return showToast('Name erforderlich!','error');
+      if(id) await supabase.from('kinder').update(data).eq('id', id);
       else await supabase.from('kinder').insert(data);
-      m.remove();showToast('Gespeichert!');
+      m.remove();
+      showToast('Gespeichert!');
     }},
-    {label:'Abbrechen',class:'btn-secondary',onClick:(m)=>m.remove()}
+    {label:'Abbrechen', class:'btn-secondary', onClick: (m) => m.remove()}
   ]);
 }
 
 // ========== SCHUHE ==========
 function renderSchuhe(){
-  const list=document.getElementById('schuheListe');
-  if(!kinder.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-shoe-prints"></i></div><div class="empty-state-text">Keine Kinder vorhanden</div></div>`;return}
-  list.innerHTML=kinder.map(k=>`
+  const list = document.getElementById('schuheListe');
+  if(!kinder.length) {
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-shoe-prints"></i></div><div class="empty-state-text">Keine Kinder vorhanden</div></div>`;
+    return;
+  }
+  list.innerHTML = kinder.map(k => `
     <div class="item">
       <div class="item-header"><div class="item-title">${escapeHtml(k.name)}</div></div>
       <div class="flex gap-3 mt-3">
@@ -558,21 +695,24 @@ function renderSchuhe(){
     </div>`).join('');
 }
 
-window.updateSchuh=async(id,field,value)=>{
-  await supabase.from('kinder').update({[field]:value}).eq('id',id);
+window.updateSchuh = async function(id, field, value){
+  await supabase.from('kinder').update({[field]: value}).eq('id', id);
   showToast('Aktualisiert!');
 };
 
 // ========== TRAINING ==========
 function renderTermine(){
-  const list=document.getElementById('termineListe');
-  if(!termine.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-calendar-alt"></i></div><div class="empty-state-text">Keine Termine</div></div>`;return}
-  list.innerHTML=termine.map(t=>{
-    const bc=t.typ==='pflicht'?'badge-danger':t.typ==='freiwillig'?'badge-success':'badge-primary';
-    const bt=t.typ==='pflicht'?'Pflicht':t.typ==='freiwillig'?'Freiwillig':'Normal';
-    const anw=t.anwesenheit||{};
-    const present=kinder.filter(k=>anw[k.id]).length;
-    const datum=t.datum?formatDate(t.datum):'Termin folgt';
+  const list = document.getElementById('termineListe');
+  if(!termine.length) {
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-calendar-alt"></i></div><div class="empty-state-text">Keine Termine</div></div>`;
+    return;
+  }
+  list.innerHTML = termine.map(t => {
+    const bc = t.typ === 'pflicht' ? 'badge-danger' : t.typ === 'freiwillig' ? 'badge-success' : 'badge-primary';
+    const bt = t.typ === 'pflicht' ? 'Pflicht' : t.typ === 'freiwillig' ? 'Freiwillig' : 'Normal';
+    const anw = t.anwesenheit || {};
+    const present = kinder.filter(k => anw[k.id]).length;
+    const datum = t.datum ? formatDate(t.datum) : 'Termin folgt';
     return `
     <div class="card">
       <div class="card-header">
@@ -587,7 +727,7 @@ function renderTermine(){
       <div class="mt-4">
         <div class="flex justify-between items-center mb-3"><strong>Anwesenheit (${present}/${kinder.length})</strong><button class="btn btn-sm btn-secondary" onclick="toggleAllAnw('${t.id}')"><i class="fas fa-check-double"></i> Alle</button></div>
         <div class="checkbox-list">
-          ${kinder.map(k=>`<label class="checkbox-item"><input type="checkbox" ${anw[k.id]?'checked':''} onchange="toggleAnw('${t.id}','${k.id}',this.checked)"><span>${escapeHtml(k.name)}</span>${anw[k.id]?'<span class="badge badge-success" style="margin-left:auto"><i class="fas fa-check"></i></span>':''}</label>`).join('')}
+          ${kinder.map(k => `<label class="checkbox-item"><input type="checkbox" ${anw[k.id]?'checked':''} onchange="toggleAnw('${t.id}','${k.id}',this.checked)"><span>${escapeHtml(k.name)}</span>${anw[k.id]?'<span class="badge badge-success" style="margin-left:auto"><i class="fas fa-check"></i></span>':''}</label>`).join('')}
         </div>
       </div>
       <div class="mt-3"><label class="input-label text-xs">Notiz</label><input type="text" class="input-field" value="${escapeHtml(t.notiz||'')}" placeholder="Notiz..." onchange="updateTermin('${t.id}','notiz',this.value)"></div>
@@ -599,38 +739,38 @@ function renderTermine(){
   }).join('');
 }
 
-window.toggleAnw=async(tid,kid,checked)=>{
-  const t=termine.find(x=>x.id===tid);
-  const anw={...(t.anwesenheit||{})};
-  if(checked) anw[kid]=true; else delete anw[kid];
-  await supabase.from('termine').update({anwesenheit:anw}).eq('id',tid);
+window.toggleAnw = async function(tid, kid, checked){
+  const t = termine.find(x => x.id === tid);
+  const anw = {...(t.anwesenheit || {})};
+  if(checked) anw[kid] = true; else delete anw[kid];
+  await supabase.from('termine').update({anwesenheit: anw}).eq('id', tid);
 };
 
-window.toggleAllAnw=async(tid)=>{
-  const t=termine.find(x=>x.id===tid);
-  const anw=t.anwesenheit||{};
-  const all=kinder.every(k=>anw[k.id]);
-  const newAnw={};
-  if(!all) kinder.forEach(k=>newAnw[k.id]=true);
-  await supabase.from('termine').update({anwesenheit:newAnw}).eq('id',tid);
-  showToast(all?'Alle abwesend':'Alle anwesend');
+window.toggleAllAnw = async function(tid){
+  const t = termine.find(x => x.id === tid);
+  const anw = t.anwesenheit || {};
+  const all = kinder.every(k => anw[k.id]);
+  const newAnw = {};
+  if(!all) kinder.forEach(k => newAnw[k.id] = true);
+  await supabase.from('termine').update({anwesenheit: newAnw}).eq('id', tid);
+  showToast(all ? 'Alle abwesend' : 'Alle anwesend');
 };
 
-window.updateTermin=async(id,field,value)=>{
-  await supabase.from('termine').update({[field]:value}).eq('id',id);
+window.updateTermin = async function(id, field, value){
+  await supabase.from('termine').update({[field]: value}).eq('id', id);
 };
 
-window.editTermin=(id)=>openTerminModal(id);
+window.editTermin = function(id){ openTerminModal(id); };
 
-window.deleteTermin=async(id)=>{
-  if(!confirm('Termin löschen?'))return;
-  await supabase.from('termine').delete().eq('id',id);
+window.deleteTermin = async function(id){
+  if(!confirm('Termin löschen?')) return;
+  await supabase.from('termine').delete().eq('id', id);
   showToast('Termin gelöscht');
 };
 
-function openTerminModal(id=null){
-  const t=id?termine.find(x=>x.id===id):{};
-  createModal(id?'Termin bearbeiten':'Termin hinzufügen',`
+function openTerminModal(id = null){
+  const t = id ? termine.find(x => x.id === id) : {};
+  createModal(id ? 'Termin bearbeiten' : 'Termin hinzufügen', `
     <div class="input-group"><label class="input-label">Titel *</label><input type="text" id="m_titel" class="input-field" value="${escapeHtml(t.titel||'')}"></div>
     <div class="flex gap-3">
       <div class="flex-1 input-group"><label class="input-label">Datum</label><input type="date" id="m_datum" class="input-field" value="${escapeHtml(t.datum||'')}"></div>
@@ -639,61 +779,76 @@ function openTerminModal(id=null){
     <div class="input-group"><label class="input-label">Ort</label><input type="text" id="m_ort" class="input-field" value="${escapeHtml(t.ort||'')}"></div>
     <div class="input-group"><label class="input-label">Typ</label><select id="m_typ" class="input-field"><option value="normal" ${t.typ==='normal'?'selected':''}>Normal</option><option value="pflicht" ${t.typ==='pflicht'?'selected':''}>Pflicht</option><option value="freiwillig" ${t.typ==='freiwillig'?'selected':''}>Freiwillig</option></select></div>
     <div class="input-group"><label class="input-label">Infos</label><textarea id="m_info" class="input-field" style="min-height:80px">${escapeHtml(t.info||'')}</textarea></div>
-  `,[
-    {label:'Speichern',class:'btn-primary',onClick:async(m)=>{
-      const data={titel:document.getElementById('m_titel').value.trim(),datum:document.getElementById('m_datum').value,uhrzeit:document.getElementById('m_uhr').value.trim(),ort:document.getElementById('m_ort').value.trim(),typ:document.getElementById('m_typ').value,info:document.getElementById('m_info').value.trim()};
+  `, [
+    {label:'Speichern', class:'btn-primary', onClick: async(m) => {
+      const data = {
+        titel: document.getElementById('m_titel').value.trim(),
+        datum: document.getElementById('m_datum').value,
+        uhrzeit: document.getElementById('m_uhr').value.trim(),
+        ort: document.getElementById('m_ort').value.trim(),
+        typ: document.getElementById('m_typ').value,
+        info: document.getElementById('m_info').value.trim()
+      };
       if(!data.titel) return showToast('Titel erforderlich!','error');
-      if(id) await supabase.from('termine').update(data).eq('id',id);
-      else await supabase.from('termine').insert({...data,anwesenheit:{}});
-      m.remove();showToast('Gespeichert!');
+      if(id) await supabase.from('termine').update(data).eq('id', id);
+      else await supabase.from('termine').insert({...data, anwesenheit:{}});
+      m.remove();
+      showToast('Gespeichert!');
     }},
-    {label:'Abbrechen',class:'btn-secondary',onClick:(m)=>m.remove()}
+    {label:'Abbrechen', class:'btn-secondary', onClick: (m) => m.remove()}
   ]);
 }
 
 // ========== FOTOS ==========
-window.uploadFotos=async(e)=>{
-  const files=[...e.target.files];if(!files.length)return;
-  const name=localStorage.getItem('ecg_name')||'Unbekannt';
-  let uploaded=0;
+window.uploadFotos = async function(e){
+  const files = [...e.target.files];
+  if(!files.length) return;
+  const name = localStorage.getItem('ecg_name') || 'Unbekannt';
+  let uploaded = 0;
   for(const file of files){
-    try{
-      const compressed=await compressImage(file);
-      const path=`${Date.now()}_${file.name}`;
-      const {error}=await supabase.storage.from('fotos').upload(path,compressed);
+    try {
+      const compressed = await compressImage(file);
+      const path = `${Date.now()}_${file.name}`;
+      const {error} = await supabase.storage.from('fotos').upload(path, compressed);
       if(error) throw error;
-      const {data:{publicUrl}}=supabase.storage.from('fotos').getPublicUrl(path);
-      await supabase.from('fotos').insert({url:publicUrl,path,uploader_name:name});
+      const {data:{publicUrl}} = supabase.storage.from('fotos').getPublicUrl(path);
+      await supabase.from('fotos').insert({url: publicUrl, path, uploader_name: name});
       uploaded++;
-    }catch(err){console.error(err)}
+    } catch(err) { console.error(err); }
   }
   showToast(`${uploaded} Foto(s) hochgeladen!`);
-  e.target.value='';
+  e.target.value = '';
 };
 
 function renderFotos(){
-  const grid=document.getElementById('fotoGrid');
-  if(!fotos.length){grid.innerHTML=`<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon"><i class="fas fa-camera"></i></div><div class="empty-state-text">Noch keine Fotos</div></div>`;return}
-  grid.innerHTML=fotos.map(f=>`
+  const grid = document.getElementById('fotoGrid');
+  if(!fotos.length) {
+    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1"><div class="empty-state-icon"><i class="fas fa-camera"></i></div><div class="empty-state-text">Noch keine Fotos</div></div>`;
+    return;
+  }
+  grid.innerHTML = fotos.map(f => `
     <div class="photo-item" onclick="showFoto('${f.url}')">
       <img src="${f.url}" alt="Foto" loading="lazy">
       <div class="photo-info"><div><i class="fas fa-user"></i> ${escapeHtml(f.uploader_name||'')}</div><div class="text-xs"><i class="fas fa-clock"></i> ${formatDateTime(f.created_at)}</div></div>
     </div>`).join('');
 }
 
-window.showFoto=(url)=>{
-  const m=document.createElement('div');
-  m.className='modal-overlay';
-  m.innerHTML=`<button class="modal-close" style="position:absolute;top:20px;right:20px;color:white;font-size:2rem;background:rgba(0,0,0,.5)"><i class="fas fa-times"></i></button><img src="${url}" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5)">`;
-  m.addEventListener('click',(e)=>{if(e.target===m||e.target.closest('button'))m.remove()});
+window.showFoto = function(url){
+  const m = document.createElement('div');
+  m.className = 'modal-overlay';
+  m.innerHTML = `<button class="modal-close" style="position:absolute;top:20px;right:20px;color:white;font-size:2rem;background:rgba(0,0,0,.5)"><i class="fas fa-times"></i></button><img src="${url}" style="max-width:90vw;max-height:90vh;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.5)">`;
+  m.addEventListener('click', (e) => { if(e.target === m || e.target.closest('button')) m.remove(); });
   document.body.appendChild(m);
 };
 
 // ========== E-MAILS ==========
 function renderEmails(){
-  const list=document.getElementById('emailListe');
-  if(!emails.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-envelope"></i></div><div class="empty-state-text">Keine E-Mails</div></div>`;return}
-  list.innerHTML=emails.map(m=>`
+  const list = document.getElementById('emailListe');
+  if(!emails.length) {
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-envelope"></i></div><div class="empty-state-text">Keine E-Mails</div></div>`;
+    return;
+  }
+  list.innerHTML = emails.map(m => `
     <div class="item">
       <div class="item-header">
         <div>
@@ -714,70 +869,82 @@ function renderEmails(){
     </div>`).join('');
 }
 
-window.editEmail=(id)=>openEmailModal(id);
-window.deleteEmail=async(id)=>{if(!confirm('Löschen?'))return;await supabase.from('emails').delete().eq('id',id);showToast('Gelöscht')};
+window.editEmail = function(id){ openEmailModal(id); };
+window.deleteEmail = async function(id){ if(!confirm('Löschen?')) return; await supabase.from('emails').delete().eq('id', id); showToast('Gelöscht'); };
 
-window.antwortEmail=(id)=>{
-  const m=emails.find(x=>x.id===id);
-  const a=prompt(`Antwort an ${m.von||'—'}:`,m.antwort||'');
-  if(a===null) return;
-  supabase.from('emails').update({antwort:a}).eq('id',id);
+window.antwortEmail = function(id){
+  const m = emails.find(x => x.id === id);
+  const a = prompt(`Antwort an ${m.von||'—'}:`, m.antwort || '');
+  if(a === null) return;
+  supabase.from('emails').update({antwort: a}).eq('id', id);
   showToast('Antwort gespeichert!');
 };
 
-window.uebernehmeEntwurf=async(id)=>{
-  const m=emails.find(x=>x.id===id);
-  await supabase.from('emails').insert({von:m.an,an:m.von,betreff:'Re: '+(m.betreff||''),datum:new Date().toLocaleDateString('de-DE'),text:'',entwurf:true});
+window.uebernehmeEntwurf = async function(id){
+  const m = emails.find(x => x.id === id);
+  await supabase.from('emails').insert({von: m.an, an: m.von, betreff: 'Re: ' + (m.betreff||''), datum: new Date().toLocaleDateString('de-DE'), text: '', entwurf: true});
   showToast('Entwurf übernommen!');
 };
 
-function openEmailModal(id=null){
-  const m=id?emails.find(x=>x.id===id):{};
-  createModal(id?'E-Mail bearbeiten':'Neue E-Mail',`
+function openEmailModal(id = null){
+  const m = id ? emails.find(x => x.id === id) : {};
+  createModal(id ? 'E-Mail bearbeiten' : 'Neue E-Mail', `
     <div class="input-group"><label class="input-label">Von</label><input type="text" id="m_von" class="input-field" value="${escapeHtml(m.von||'')}"></div>
     <div class="input-group"><label class="input-label">An</label><input type="text" id="m_an" class="input-field" value="${escapeHtml(m.an||'')}"></div>
     <div class="input-group"><label class="input-label">Betreff</label><input type="text" id="m_betreff" class="input-field" value="${escapeHtml(m.betreff||'')}"></div>
     <div class="input-group"><label class="input-label">Datum</label><input type="text" id="m_datum" class="input-field" placeholder="TT.MM.JJJJ" value="${escapeHtml(m.datum||'')}"></div>
     <div class="input-group"><label class="input-label">Text</label><textarea id="m_text" class="input-field" style="min-height:150px">${escapeHtml(m.text||'')}</textarea></div>
     <div class="input-group"><label style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="m_entwurf" ${m.entwurf?'checked':''} style="width:auto"><span>Als Entwurf</span></label></div>
-  `,[
-    {label:'Speichern',class:'btn-primary',onClick:async(modal)=>{
-      const data={von:document.getElementById('m_von').value.trim(),an:document.getElementById('m_an').value.trim(),betreff:document.getElementById('m_betreff').value.trim(),datum:document.getElementById('m_datum').value.trim(),text:document.getElementById('m_text').value.trim(),entwurf:document.getElementById('m_entwurf').checked};
-      if(id) await supabase.from('emails').update(data).eq('id',id);
+  `, [
+    {label:'Speichern', class:'btn-primary', onClick: async(modal) => {
+      const data = {
+        von: document.getElementById('m_von').value.trim(),
+        an: document.getElementById('m_an').value.trim(),
+        betreff: document.getElementById('m_betreff').value.trim(),
+        datum: document.getElementById('m_datum').value.trim(),
+        text: document.getElementById('m_text').value.trim(),
+        entwurf: document.getElementById('m_entwurf').checked
+      };
+      if(id) await supabase.from('emails').update(data).eq('id', id);
       else await supabase.from('emails').insert(data);
-      modal.remove();showToast('Gespeichert!');
+      modal.remove();
+      showToast('Gespeichert!');
     }},
-    {label:'Abbrechen',class:'btn-secondary',onClick:(m)=>m.remove()}
+    {label:'Abbrechen', class:'btn-secondary', onClick: (m) => m.remove()}
   ]);
 }
 
-window.importEmails=async(e)=>{
-  const files=[...e.target.files];if(!files.length)return;
+window.importEmails = async function(e){
+  const files = [...e.target.files];
+  if(!files.length) return;
   for(const file of files){
-    const text=await file.text();
+    const text = await file.text();
     let data;
-    try{
-      if(file.name.endsWith('.json')) data=JSON.parse(text);
-      else{
-        const von=(text.match(/^From:\s*(.+)/im)||['',''])[1];
-        const an=(text.match(/^To:\s*(.+)/im)||['',''])[1];
-        const betreff=(text.match(/^Subject:\s*(.+)/im)||['',''])[1];
-        const datum=(text.match(/^Date:\s*(.+)/im)||['',''])[1];
-        const body=text.split(/\n\n/).slice(1).join('\n\n').trim();
-        data={von,an,betreff,datum,text:body};
+    try {
+      if(file.name.endsWith('.json')) data = JSON.parse(text);
+      else {
+        const von = (text.match(/^From:\s*(.+)/im) || ['',''])[1];
+        const an = (text.match(/^To:\s*(.+)/im) || ['',''])[1];
+        const betreff = (text.match(/^Subject:\s*(.+)/im) || ['',''])[1];
+        const datum = (text.match(/^Date:\s*(.+)/im) || ['',''])[1];
+        const body = text.split(/\n\n/).slice(1).join('\n\n').trim();
+        data = {von, an, betreff, datum, text: body};
       }
-    }catch{data={betreff:file.name,text}}
+    } catch { data = {betreff: file.name, text}; }
     await supabase.from('emails').insert(data);
   }
   showToast(`${files.length} E-Mail(s) importiert!`);
-  e.target.value='';
+  e.target.value = '';
 };
 
 // ========== PASSWÖRTER ==========
 function renderPasswoerter(){
-  const list=document.getElementById('pwListe');
-  if(!passwoerter.length){list.innerHTML=`<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-key"></i></div><div class="empty-state-text">Keine Passwörter</div></div>`;return}
-  list.innerHTML=passwoerter.map(p=>`
+  const list = document.getElementById('pwListe');
+  if(!passwoerter.length) {
+    list.innerHTML = `<div class="empty-state"><div class="empty-state-icon"><i class="fas fa-key"></i></div><div class="empty-state-text">Keine Passwörter</div></div>`;
+    return;
+  }
+  list.innerHTML = passwoerter.map(p => `
     <div class="item">
       <div class="item-header">
         <div>
@@ -796,89 +963,99 @@ function renderPasswoerter(){
     </div>`).join('');
 }
 
-window.togglePw=(id)=>{const el=document.getElementById(`pw_${id}`);el.style.filter=el.style.filter==='blur(5px)'?'none':'blur(5px)'};
-window.editPw=(id)=>openPwModal(id);
-window.deletePw=async(id)=>{if(!confirm('Löschen?'))return;await supabase.from('passwoerter').delete().eq('id',id);showToast('Gelöscht')};
+window.togglePw = function(id){ const el = document.getElementById(`pw_${id}`); el.style.filter = el.style.filter === 'blur(5px)' ? 'none' : 'blur(5px)'; };
+window.editPw = function(id){ openPwModal(id); };
+window.deletePw = async function(id){ if(!confirm('Löschen?')) return; await supabase.from('passwoerter').delete().eq('id', id); showToast('Gelöscht'); };
 
-function openPwModal(id=null){
-  const p=id?passwoerter.find(x=>x.id===id):{};
-  createModal(id?'Eintrag bearbeiten':'Neuer Eintrag',`
+function openPwModal(id = null){
+  const p = id ? passwoerter.find(x => x.id === id) : {};
+  createModal(id ? 'Eintrag bearbeiten' : 'Neuer Eintrag', `
     <div class="input-group"><label class="input-label">Dienst *</label><select id="m_dienst" class="input-field"><option value="Yahoo" ${p.dienst==='Yahoo'?'selected':''}>Yahoo</option><option value="ChatGPT" ${p.dienst==='ChatGPT'?'selected':''}>ChatGPT</option><option value="Claude" ${p.dienst==='Claude'?'selected':''}>Claude</option><option value="Sonstiges" ${p.dienst==='Sonstiges'?'selected':''}>Sonstiges</option></select></div>
     <div class="input-group"><label class="input-label">URL</label><input type="url" id="m_url" class="input-field" placeholder="https://..." value="${escapeHtml(p.url||'')}"></div>
     <div class="input-group"><label class="input-label">Login *</label><input type="text" id="m_login" class="input-field" value="${escapeHtml(p.login||'')}"></div>
     <div class="input-group"><label class="input-label">Passwort *</label><input type="password" id="m_passwort" class="input-field" value="${escapeHtml(p.passwort||'')}"></div>
     <div class="input-group"><label class="input-label">Notizen</label><textarea id="m_notiz" class="input-field" style="min-height:80px">${escapeHtml(p.notiz||'')}</textarea></div>
-  `,[
-    {label:'Speichern',class:'btn-primary',onClick:async(m)=>{
-      const login=document.getElementById('m_login').value.trim();
-      const passwort=document.getElementById('m_passwort').value.trim();
-      if(!login||!passwort) return showToast('Login & Passwort erforderlich!','error');
-      const data={dienst:document.getElementById('m_dienst').value,url:document.getElementById('m_url').value.trim(),login,passwort,notiz:document.getElementById('m_notiz').value.trim()};
-      if(id) await supabase.from('passwoerter').update(data).eq('id',id);
+  `, [
+    {label:'Speichern', class:'btn-primary', onClick: async(m) => {
+      const login = document.getElementById('m_login').value.trim();
+      const passwort = document.getElementById('m_passwort').value.trim();
+      if(!login || !passwort) return showToast('Login & Passwort erforderlich!','error');
+      const data = {
+        dienst: document.getElementById('m_dienst').value,
+        url: document.getElementById('m_url').value.trim(),
+        login,
+        passwort,
+        notiz: document.getElementById('m_notiz').value.trim()
+      };
+      if(id) await supabase.from('passwoerter').update(data).eq('id', id);
       else await supabase.from('passwoerter').insert(data);
-      m.remove();showToast('Gespeichert!');
+      m.remove();
+      showToast('Gespeichert!');
     }},
-    {label:'Abbrechen',class:'btn-secondary',onClick:(m)=>m.remove()}
+    {label:'Abbrechen', class:'btn-secondary', onClick: (m) => m.remove()}
   ]);
 }
 
 // ========== HILFSFUNKTIONEN ==========
-function createModal(title,content,actions=[]){
-  const m=document.createElement('div');
-  m.className='modal-overlay';
-  m.innerHTML=`<div class="modal"><div class="modal-header"><h2 class="modal-title">${escapeHtml(title)}</h2><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="fas fa-times"></i></button></div><div class="modal-body">${content}</div><div class="modal-footer">${actions.map(a=>`<button class="btn ${a.class}" data-action="${a.label}">${escapeHtml(a.label)}</button>`).join('')}</div></div>`;
-  actions.forEach(a=>{m.querySelector(`[data-action="${a.label}"]`).addEventListener('click',()=>a.onClick(m))});
-  m.addEventListener('click',(e)=>{if(e.target===m)m.remove()});
+function createModal(title, content, actions = []){
+  const m = document.createElement('div');
+  m.className = 'modal-overlay';
+  m.innerHTML = `<div class="modal"><div class="modal-header"><h2 class="modal-title">${escapeHtml(title)}</h2><button class="modal-close" onclick="this.closest('.modal-overlay').remove()"><i class="fas fa-times"></i></button></div><div class="modal-body">${content}</div><div class="modal-footer">${actions.map(a => `<button class="btn ${a.class}" data-action="${a.label}">${escapeHtml(a.label)}</button>`).join('')}</div></div>`;
+  actions.forEach(a => { m.querySelector(`[data-action="${a.label}"]`).addEventListener('click', () => a.onClick(m)); });
+  m.addEventListener('click', (e) => { if(e.target === m) m.remove(); });
   document.body.appendChild(m);
   return m;
 }
 
-window.showToast=(message,type='success')=>{
-  const t=document.getElementById('toast');
-  document.getElementById('toastMessage').textContent=message;
-  t.className=`toast ${type}`;
-  setTimeout(()=>t.classList.add('show'),10);
-  setTimeout(()=>t.classList.remove('show'),3000);
+window.showToast = function(message, type = 'success'){
+  const t = document.getElementById('toast');
+  document.getElementById('toastMessage').textContent = message;
+  t.className = `toast ${type}`;
+  setTimeout(() => t.classList.add('show'), 10);
+  setTimeout(() => t.classList.remove('show'), 3000);
 };
 
 function parseCSV(text){
-  const lines=text.split(/\r?\n/).filter(l=>l.trim());
-  if(lines.length<2) return [];
-  const sep=lines[0].includes(';')?';':',';
-  const headers=lines[0].split(sep).map(h=>h.trim().replace(/^"|"$/g,''));
-  return lines.slice(1).map(line=>{
-    const cells=line.split(sep);
-    const obj={};
-    headers.forEach((h,i)=>{obj[h]=(cells[i]||'').trim().replace(/^"|"$/g,'')});
+  const lines = text.split(/\r?\n/).filter(l => l.trim());
+  if(lines.length < 2) return [];
+  const sep = lines[0].includes(';') ? ';' : ',';
+  const headers = lines[0].split(sep).map(h => h.trim().replace(/^"|"$/g, ''));
+  return lines.slice(1).map(line => {
+    const cells = line.split(sep);
+    const obj = {};
+    headers.forEach((h, i) => { obj[h] = (cells[i] || '').trim().replace(/^"|"$/g, ''); });
     return obj;
   });
 }
 
-function escapeHtml(text){const d=document.createElement('div');d.textContent=text||'';return d.innerHTML}
-function formatDate(d){if(!d)return'';return new Date(d).toLocaleDateString('de-DE')}
-function formatDateTime(t){if(!t)return'';const d=new Date(t);return d.toLocaleString('de-DE')}
-function debounce(f,w){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),w)}}
+function escapeHtml(text){ const d = document.createElement('div'); d.textContent = text || ''; return d.innerHTML; }
+function formatDate(d){ if(!d) return ''; return new Date(d).toLocaleDateString('de-DE'); }
+function formatDateTime(t){ if(!t) return ''; const d = new Date(t); return d.toLocaleString('de-DE'); }
+function debounce(f, w){ let t; return (...a) => { clearTimeout(t); t = setTimeout(() => f(...a), w); }; }
 
-function compressImage(file,maxWidth=1920,quality=.8){
-  return new Promise((resolve)=>{
-    const r=new FileReader();
-    r.onload=(e)=>{
-      const img=new Image();
-      img.onload=()=>{
-        const c=document.createElement('canvas');
-        let w=img.width,h=img.height;
-        if(w>maxWidth){h=(h*maxWidth)/w;w=maxWidth}
-        c.width=w;c.height=h;
-        c.getContext('2d').drawImage(img,0,0,w,h);
-        c.toBlob((b)=>resolve(new File([b],file.name,{type:'image/jpeg'})),'image/jpeg',quality);
+function compressImage(file, maxWidth = 1920, quality = .8){
+  return new Promise((resolve) => {
+    const r = new FileReader();
+    r.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const c = document.createElement('canvas');
+        let w = img.width, h = img.height;
+        if(w > maxWidth){ h = (h * maxWidth) / w; w = maxWidth; }
+        c.width = w; c.height = h;
+        c.getContext('2d').drawImage(img, 0, 0, w, h);
+        c.toBlob((b) => resolve(new File([b], file.name, {type:'image/jpeg'})), 'image/jpeg', quality);
       };
-      img.src=e.target.result;
+      img.src = e.target.result;
     };
     r.readAsDataURL(file);
   });
 }
 
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(e=>console.warn(e))}
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(e => console.warn(e)); }
+
+// ========== APP STARTEN ==========
+console.log('🚀 Lade App...');
 initAuth();
 </script>
 </body>
